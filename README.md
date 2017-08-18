@@ -7,7 +7,11 @@ To install the p1 USB reader run the following commands
 
 "git clone https://github.com/arnekaas/meterdataanalytics/"
 
-"crontab -e" and the add "@reboot /usr/bin/python /path/to/loggers/usb_p1_logger/schedule_p1_reader.py 2>&1" to run the script after each reboot. The file will record alle data every 10 seconds, which leads to about 1Mb per day. Make sure you have enough space
+to schedule the reader each 10 seconds python module schedule is required:
+"pip install schedule"
+
+to run the script after each reboot:
+"crontab -e" and the add "@reboot /usr/bin/python /path/to/loggers/usb_p1_logger/schedule_p1_reader.py 2>&1"  The file will record alle data every 10 seconds, which leads to about 1Mb per day. Make sure you have enough space.
 
 ## hardware requirements
 - raspberry pi
